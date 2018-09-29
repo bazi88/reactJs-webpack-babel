@@ -1,9 +1,11 @@
 import React from "react";
+import { Switch, Route } from 'react-router-dom'
 
 import MessageList from './components/MessageList';
 import NewRoomForm from './components/NewRoomForm';
 import RoomList from './components/RoomList';
 import SendMessageForm from './components/SendMessageForm';
+import User from './components/User';
 
 import { locator, tokenUrl } from './configs'
 
@@ -116,11 +118,12 @@ class App extends React.Component {
 
     render() {
         return (
+
             <div className="app">
-                <RoomList roomId={this.state.roomId} subscribeToRoom={this.subscribeToRoom} rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} johnRoom={this.johnRoom} />
-                <MessageList messages={this.state.messages} />
-                <NewRoomForm createRoom={this.createRoom} />
-                <SendMessageForm sendMessage={this.sendMessage} />
+                    <RoomList roomId={this.state.roomId} subscribeToRoom={this.subscribeToRoom} rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} johnRoom={this.johnRoom} />
+                    <MessageList messages={this.state.messages} />
+                    <NewRoomForm createRoom={this.createRoom} />
+                    <SendMessageForm sendMessage={this.sendMessage} />
             </div>
         )
     }
