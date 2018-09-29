@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from 'react-router-dom'
 
-import App from '../App';
+import Layout from '../Layout';
 
-ReactDOM.render(< App message="my friend" />, document.getElementById("index"));
+ReactDOM.render(<BrowserRouter>< Layout/></BrowserRouter>, document.getElementById("index"));

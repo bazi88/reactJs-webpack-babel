@@ -20,14 +20,14 @@ body {
 .list-room-chat {
     grid-column: span 4;
     background-color: #a99dd2;
-    height: 94vh;
+    height: 84vh;
     overflow: auto;
 }
 
 .message-list {
     grid-column: span 6;
     background-color: #77bdbf;
-    height: 94vh;
+    height: 84vh;
     overflow: auto auto;
 }
 
@@ -114,4 +114,32 @@ body {
     display: inline-block;
     padding: 8px 30px;
     border-radius: 15%;
+}
+.listHeader{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin:0;
+    padding:0;
+    height: 10vh;
+    background-color: cornflowerblue;
+}
+.listHeader li{
+    width: 50%;
+    text-align: center;
+}
+.listHeader li a{
+    color:floralwhite;
+}
+.list-user{
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+.header{
+    background-color: burlywood;
+    color: black;
 }
