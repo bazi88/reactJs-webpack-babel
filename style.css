@@ -143,10 +143,6 @@ table, th, td {
     background-color: burlywood;
     color: black;
 }
-.pagination {
-    display: inline-block;
-}
-
 .pagination a {
     color: black;
     float: left;
@@ -161,7 +157,8 @@ table, th, td {
     border: 1px solid #4CAF50;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination a:hover:not(.active) {    background-color: #73726e;
+    color: #ffffff;}
 
 .pagination a:first-child {
     border-top-left-radius: 5px;
@@ -170,4 +167,14 @@ table, th, td {
 
 .pagination a:last-child {
     border-top-right-radius: 5px;
-    border-bott
+}
+.pagination{
+    width: 100%;
+}
+.pagination ul{
+    list-style-type: none;
+
+}
+.active{
+
+}

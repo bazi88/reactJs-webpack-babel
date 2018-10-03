@@ -24,7 +24,7 @@ class Panigation extends React.Component{
                     const newIndex =index +1;
                     const active = this.props.page === newIndex ? 'active' : '';
                     return(
-                        <li className={"pagination"+active} key={index} onClick={(()=>{this.props.getData(newIndex)})}>
+                        <li className={"pagination "+active} key={index} onClick={(()=>{this.props.getData(newIndex)})}>
                            <a href="#">{pagin}</a>
                         </li>
                     )

@@ -6,34 +6,23 @@ class User extends React.Component{
         super();
         this.state = {
             user:[],
-            page:'1'
         }
-        this.handleClick = this.handleClick.bind(this);
         this.getData =this.getData.bind(this);
         this.fetch =this.fetch.bind(this);
     }
     getData(pages){
-        console.log(pages);
         this.setState({
             page:pages
         })
-        this.fetch(this.state.page);
+        this.fetch(pages);
             
     }
     fetch(page){
         console.log(page);
-        fetch('https://randomuser.me/api/?page=${this.state.page}&results=30&seed=abc')
+        fetch(`https://randomuser.me/api/?page=${page}&results=50&seed=abc`)
             .then(result =>{
                 return(result.json());
             }).then(data=>{
-                console.log(data);
-                let user = data.results.map((users,index)=>{
-                    return(
-                        <div key={index} className="list-user">
-                            <div className="user-name">{users.name.title}</div>
-                        </div>   
-                    )
-                })
                 this.setState({user:data.results})
             })   
         }
@@ -41,8 +30,7 @@ class User extends React.Component{
     componentDidMount(){
         this.getData();
     }
-    handleClick(users){
-    }
+
     render(){
         return(
             <div>
